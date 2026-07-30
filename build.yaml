@@ -8,13 +8,6 @@ include:
     shield: sofle_right
     artifact-name: sofle_rgb_mx_v1_right
 
-  # Diagnostic build for controllers whose 32.768 kHz crystal is missing or
-  # faulty. It uses the nRF52840 internal RC oscillator for Bluetooth timing.
-  - board: nice_nano_v2
-    shield: sofle_right
-    artifact-name: sofle_rgb_mx_v1_right_rc_oscillator
-    cmake-args: -DCONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
-
   - board: nice_nano_v2
     shield: settings_reset
     artifact-name: settings_reset_nice_nano_v2
