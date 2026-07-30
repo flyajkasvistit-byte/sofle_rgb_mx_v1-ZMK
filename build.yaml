@@ -1,5 +1,6 @@
 ---
 include:
+  # Standard two-controller Sofle (left central, right peripheral).
   - board: nice_nano_v2
     shield: sofle_left
     artifact-name: sofle_rgb_mx_v1_left
@@ -7,6 +8,23 @@ include:
   - board: nice_nano_v2
     shield: sofle_right
     artifact-name: sofle_rgb_mx_v1_right
+
+  # Dongle variant: both keyboard halves are BLE peripherals.
+  - board: nice_nano_v2
+    shield: sofle_left
+    artifact-name: sofle_rgb_mx_v1_dongle_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  - board: nice_nano_v2
+    shield: sofle_right
+    artifact-name: sofle_rgb_mx_v1_dongle_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # USB/BLE central with the SH1106 status screen and Bongo Cat.
+  - board: nice_nano_v2
+    shield: sofle_dongle dongle_display
+    artifact-name: sofle_rgb_mx_v1_dongle
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
   - board: nice_nano_v2
     shield: settings_reset
