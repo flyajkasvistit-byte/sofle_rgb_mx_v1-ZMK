@@ -3,9 +3,9 @@
 
 if SHIELD_SOFLE_DONGLE
 
-# Max 16 characters in keyboard name.
+# Zephyr's Bluetooth name buffer needs one extra byte for the terminator.
 config ZMK_KEYBOARD_NAME
-    default "Sofle RGB Dongle"
+    default "SofleRGB Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
